@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ArticleScreen from '../screens/ArticleScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -51,6 +52,23 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
+
+const ArticleStack = createStackNavigator(
+  {
+    Links: ArticleScreen,
+  },
+  config
+);
+
+ArticleStack.navigationOptions = {
+  tabBarLabel: 'Articles',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-list-box'} />
+  ),
+};
+
+ArticleStack.path = '';
+
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -70,6 +88,7 @@ SettingsStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
+  ArticleScreen,
   SettingsStack,
 });
 
