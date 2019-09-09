@@ -19,7 +19,7 @@ class ArticleScreen extends Component {
         return (
             <View>
                  <View style={styles.background}>
-                 
+                    <Text style={styles.title}>Les artcilzpdkjhazpkdaizdpaizdpoijazpd</Text>
                  </View>
                 <View style={styles.background}>
                 

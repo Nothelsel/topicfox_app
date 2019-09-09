@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
@@ -31,7 +32,18 @@ HomeStack.navigationOptions = {
           : 'md-information-circle'
       }
     />
+    
   ),
+  tabBarOptions: {
+    activeTintColor: 'black',
+    labelStyle: {
+      fontSize: 12,
+    },
+    style: {
+      backgroundColor: 'white',
+    },
+    -
+  }
 };
 
 HomeStack.path = '';
@@ -62,8 +74,9 @@ const ArticleStack = createStackNavigator(
 
 ArticleStack.navigationOptions = {
   tabBarLabel: 'Articles',
+  
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-list-box'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'logo-rss'} />
   ),
 };
 
@@ -81,6 +94,7 @@ SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
+
 };
 
 SettingsStack.path = '';
@@ -90,7 +104,10 @@ const tabNavigator = createBottomTabNavigator({
   LinksStack,
   ArticleScreen,
   SettingsStack,
-});
+  
+},
+
+);
 
 tabNavigator.path = '';
 

@@ -15,21 +15,10 @@ import { MonoText } from '../components/StyledText';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
-      </View>
+      <View><Text style={styles.title}>TOPICFOX</Text></View>
+      <View style={styles.container2}></View>         
     </View>
+
   );
 }
 
@@ -74,8 +63,12 @@ function handleHelpPress() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
     backgroundColor: '#1E90FF',
+  },
+  container2:{
+    flex:1,
+    backgroundColor: "white",
   },
   developmentModeText: {
     marginBottom: 20,
@@ -85,19 +78,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
-  },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  welcomeImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
+    //paddingTop: 30,
   },
   getStartedContainer: {
     alignItems: 'center',
@@ -159,4 +140,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+  title: {
+    marginTop: 20,
+    fontSize: 20,
+    alignItems: "center",
+    textAlign: 'center',
+    
+  }
 });
