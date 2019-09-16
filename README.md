@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Infoamtion App with flux rss about cybersecurity 
+> Information App with flux rss about cybersecurity 
 
 ## Install
 
